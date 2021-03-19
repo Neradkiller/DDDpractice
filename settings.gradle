@@ -11,3 +11,7 @@ project(':backoffice').projectDir = new File('src/backoffice')
 
 include ':mooc'
 project(':mooc').projectDir = new File('src/mooc')
+
+include ':hiring'
+project(':hiring').projectDir = new File('src/hiring')
+
