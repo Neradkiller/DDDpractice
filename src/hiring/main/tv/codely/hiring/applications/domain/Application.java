@@ -7,23 +7,23 @@ import java.util.Objects;
 public class Application extends AggregateRoot {
     private final ApplicationId id;
     private final ApplicationDate date;
-    private final ApplicationEmployee employee;
-    private final ApplicationJobOffer jobOffer;
+    private final ApplicationEmployee employeeId;
+    private final ApplicationJobOffer jobOfferId;
     private final ApplicationStatus status;
 
-    public Application(ApplicationId id, ApplicationDate date, ApplicationEmployee employee, ApplicationJobOffer jobOffer, ApplicationStatus status) {
+    public Application(ApplicationId id, ApplicationDate date, ApplicationEmployee employeeId, ApplicationJobOffer jobOfferId, ApplicationStatus status) {
         this.id = id;
         this.date = date;
-        this.employee = employee;
-        this.jobOffer = jobOffer;
+        this.employeeId = employeeId;
+        this.jobOfferId = jobOfferId;
         this.status = status;
     }
 
     public Application() {
         this.id = null;
         this.date = null;
-        this.employee = null;
-        this.jobOffer = null;
+        this.employeeId = null;
+        this.jobOfferId = null;
         this.status = null;
     }
 
@@ -39,9 +39,9 @@ public class Application extends AggregateRoot {
 
     public ApplicationDate date() { return date; }
 
-    public ApplicationEmployee employee() { return employee; }
+    public ApplicationEmployee employee() { return employeeId; }
 
-    public ApplicationJobOffer jobOffer() { return jobOffer; }
+    public ApplicationJobOffer jobOffer() { return jobOfferId; }
 
     public ApplicationStatus status() { return status; }
 
@@ -52,13 +52,13 @@ public class Application extends AggregateRoot {
         Application that = (Application) o;
         return Objects.equals(id, that.id) &&
                Objects.equals(date, that.date) &&
-               Objects.equals(employee, that.employee) &&
-               Objects.equals(jobOffer, that.jobOffer) &&
+               Objects.equals(employeeId, that.employeeId) &&
+               Objects.equals(jobOfferId, that.jobOfferId) &&
                Objects.equals(status, that.status);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, date, employee, jobOffer, status);
+        return Objects.hash(id, date, employeeId, jobOfferId, status);
     }
 }

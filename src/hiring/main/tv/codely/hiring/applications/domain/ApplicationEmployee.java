@@ -1,4 +1,10 @@
 package tv.codely.hiring.applications.domain;
 
-public class ApplicationEmployee {
+import tv.codely.shared.domain.Identifier;
+
+public class ApplicationEmployee extends Identifier {
+
+    public ApplicationEmployee(String value) { super(value); }
+
+    public ApplicationEmployee() { }
 }

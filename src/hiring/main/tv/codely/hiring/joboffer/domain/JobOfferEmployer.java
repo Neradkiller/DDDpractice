@@ -1,8 +1,8 @@
 package tv.codely.hiring.joboffer.domain;
 
-import tv.codely.shared.domain.StringValueObject;
+import tv.codely.shared.domain.Identifier;
 
-public class JobOfferEmployer extends StringValueObject {
+public class JobOfferEmployer extends Identifier {
 
     public JobOfferEmployer(String value) { super(value); }
 
