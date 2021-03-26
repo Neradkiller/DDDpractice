@@ -3,6 +3,7 @@ package tv.codely.hiring.joboffer.domain;
 import tv.codely.shared.domain.AggregateRoot;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class JobOffer extends AggregateRoot {
@@ -11,16 +12,16 @@ public class JobOffer extends AggregateRoot {
     private final JobOfferEmployer employerId;
     private final JobOfferLocation locationId;
     private final JobOfferDeadline deadline;
-    private final ArrayList<JobOfferSchedule> schedulesId;
-    private final ArrayList<JobOfferSkill> skillsId;
+    private final List<JobOfferSchedule> schedulesId;
+    private final List<JobOfferSkill> skillsId;
     private final JobOfferSpecialRequirements specialRequirements;
-    private final ArrayList<JobOfferCertification> certificationsId;
+    private final List<JobOfferCertification> certificationsId;
     private final JobOfferDuration duration;
     private final JobOfferHourlyRate hourlyRate;
     private final JobOfferEmployee employeeId;
     private final JobOfferStatus status;
 
-    public JobOffer(JobOfferId id, JobOfferTitle title, JobOfferEmployer employerId, JobOfferLocation locationId, JobOfferDeadline deadline, ArrayList<JobOfferSchedule> schedulesId,ArrayList<JobOfferSkill> skillsId, JobOfferSpecialRequirements specialRequirements, ArrayList<JobOfferCertification> certificationsId, JobOfferDuration duration, JobOfferHourlyRate hourlyRate, JobOfferEmployee employeeId, JobOfferStatus status) {
+    public JobOffer(JobOfferId id, JobOfferTitle title, JobOfferEmployer employerId, JobOfferLocation locationId, JobOfferDeadline deadline, List<JobOfferSchedule> schedulesId,List<JobOfferSkill> skillsId, JobOfferSpecialRequirements specialRequirements, List<JobOfferCertification> certificationsId, JobOfferDuration duration, JobOfferHourlyRate hourlyRate, JobOfferEmployee employeeId, JobOfferStatus status) {
         this.id = id;
         this.title = title;
         this.employerId = employerId;
@@ -70,11 +71,11 @@ public class JobOffer extends AggregateRoot {
 
     public JobOfferDeadline deadline() { return deadline; }
 
-    public ArrayList<JobOfferSchedule> schedules() { return schedulesId; }
+    public List<JobOfferSchedule> schedules() { return schedulesId; }
 
     public JobOfferSpecialRequirements specialRequirements() { return specialRequirements; }
 
-    public ArrayList<JobOfferCertification> certifications() { return certificationsId; }
+    public List<JobOfferCertification> certifications() { return certificationsId; }
 
     public JobOfferDuration duration() { return duration; }
 
@@ -84,7 +85,7 @@ public class JobOffer extends AggregateRoot {
 
     public JobOfferStatus status() { return status; }
 
-    public ArrayList<JobOfferSkill> getSkillsId() { return skillsId; }
+    public List<JobOfferSkill> getSkillsId() { return skillsId; }
 
     @Override
     public boolean equals(Object o) {

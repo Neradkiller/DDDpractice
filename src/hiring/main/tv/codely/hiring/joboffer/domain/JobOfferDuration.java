@@ -4,6 +4,6 @@ import tv.codely.shared.domain.DecimalValueObject;
 
 public class JobOfferDuration extends DecimalValueObject {
 
-    public JobOfferDuration(float value) { super(value); }
+    public JobOfferDuration(double value) { super(value); }
 
 }
